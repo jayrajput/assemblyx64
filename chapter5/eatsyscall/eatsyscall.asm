@@ -14,9 +14,7 @@ _start:
     mov rsi,EatMsg ; Pass offset of the message
     mov rdx,13     ; Pass the length of the message
     syscall
-    ;int 80H       ; This does not work on x86_64
 
-    mov rax,60        ; Code for Exit Syscall
-    mov rdi,60        ; Return a code of zero    
+    mov rax,60 ; Code for Exit Syscall
+    mov rdi,60 ; Return a code of zero
     syscall
-    ;int 80H        ; This does not work on x86_64
